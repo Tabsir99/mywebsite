@@ -163,9 +163,10 @@ a {
   cursor: pointer;
   transition: 0.3s;
 }
-#dark-mode:hover {
+#dark-mode:active {
   transform: scale(0.9)
 }
+
 /*Navbar section*/
 
 /*Project section*/
@@ -198,9 +199,6 @@ a {
 }
 .project-box{
   transition: 0.3s;
-}
-.project-box:hover{
-  transform: scale(1.05);
 }
 
 
@@ -248,6 +246,10 @@ a {
 
 
 @media (hover: hover){
+
+.project-box:hover{
+  transform: scale(1.05);
+}
   #source:hover {
   background-color: #367039;
 }
@@ -271,6 +273,10 @@ a {
   }
 
 @media (hover: none) {
+  
+.project-box:active{
+  transform: scale(1.05);
+}
   #source:active {
     background-color: #367039;
   }
