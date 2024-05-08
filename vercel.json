@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "src": "/$", "dest": "/PortFolio_website/index.html" },
+    { "src": "/PortFolio_website/(.*).css$", "dest": "/PortFolio_website/$1.css" },
+    { "src": "/PortFolio_website/(.*).js$", "dest": "/PortFolio_website/$1.js" },
+    { "src": "/Projects/tribute_page/(.*).css$", "dest": "/Projects/tribute_page/$1.css" },
+    { "src": "/Projects/product_landing/(.*).css$", "dest": "/Projects/product_landing/$1.css" },
+    { "src": "/Projects/survey_form/(.*).css$", "dest": "/Projects/survey_form/$1.css" },
+    { "src": "/Projects/product_landing$", "dest": "/Projects/product_landing/landing.html" }
+  ]
+}

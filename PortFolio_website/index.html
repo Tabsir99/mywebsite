@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabsir's PortFolio</title>
+  <meta name="description" content="Tabsir's portfolio website showcasing web development projects and contact information." />
+  <meta name="keywords" content="Tabsir, portfolio, web developer, projects, contact" />
+  <meta name="author" content="Tabsir" />
+  <meta name="google-site-verification" content="oII03koJNIs8UnijFk8epsabUbDOHlXZwi3VTCJCJpk" />
+  <link rel="stylesheet" href="/PortFolio_website/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="canonical" href="https://portfolio-tabsir.vercel.app" />
+  <link rel="stylesheet" href="/PortFolio_website/source.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+
+  
+</head>
+
+<body>
+  <header id="welcome-section">
+    <nav id="navbar">
+      <i class="fas fa-moon fa-sun" id="dark-mode"></i>
+
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">My Work</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+        <div id="indicator"></div>
+      </ul>
+    </nav>
+    <h1>Hello, I am Tabsir</h1>
+    <p>a web developer</p>
+  </header>
+   <script>
+    const root = document.documentElement;
+const darkMode = document.querySelector("#dark-mode");
+    
+const darkProperties = {
+  "--navbar-background": "rgba(49,49,50,1)",
+  "--navlink-color": "#ffffff",
+  "--navlink-highlight": "rgb(30,35,30)",
+  "--icon-color": "rgb(250, 250, 197)",
+  "--body-color": "#EAEAEA",
+  "--body-background": "#282828",
+  "--about-background": "#2b2b2d",
+  "--figcap-background": "#bbc",
+  "--aboutme-shadow": "0 4px 4px rgba(235, 235, 235, 0.1)",
+  "--button-background": "#333",
+  "--btn-color": "#ffffff",
+  "--btn-hover-color": "#555",
+  "--btn-border-color": "2px solid #ffffff",
+  "--btn-hover-border": "2px solid #aaa",
+  "--footer-background": "#1f1f1f",
+  "--footer-color": "#ffffff",
+  "--link-color": "#bbbbbb",
+  "--email-color": "#4b8bf5",
+  "--email-hover-color": "#82b1ff",
+  "--github": "#bbb",
+  "--copy": "#ccc",
+  "--footerborder": "4px solid #505050",
+  "--footer-h-color": "#4b8bd5",
+};
+
+//Theme Changing functonality
+
+const darkTheme = () => {
+  for (const property in darkProperties) {
+    root.style.setProperty(property, darkProperties[property]);
+  }
+};
+
+const lightTheme = () => {
+  for (const property in darkProperties) {
+    root.style.removeProperty(property);
+  }
+};
+
+//Save preference
+
+const changeTheme = () => {
+  darkMode.classList.toggle("fa-moon");
+  darkMode.classList.toggle("dark");
+  let isDark = darkMode.classList.contains("dark");
+
+  if (isDark) {
+    localStorage.setItem("theme", "dark");
+    darkTheme();
+  } else {
+    localStorage.setItem("theme", "light");
+    lightTheme();
+  }
+};
+//-----------//
+
+darkMode.addEventListener("click", changeTheme);
+
+
+  let theme = localStorage.getItem("theme") || "light";
+  if (theme === "dark") {
+    darkTheme();
+    darkMode.classList.toggle("fa-moon");
+    darkMode.classList.toggle("dark");
+  }
+  if (theme === "light") {
+    lightTheme();
+  }
+  </script>
+
+  <main id="container">
+    <section id="about-me" class="scroll">
+      <h2>About Me</h2>
+      <article>
+        <p>
+          Creativity, talent, or gift — I may not know where I stand, but my
+          passion for continuous learning is unwavering. Dedication is not
+          just a word for me; it's a practice that I embed in everything I
+          do.<br /><br />
+
+          "My goals keep me focused and resilient, driving me forward through
+          any challenge." <br /><br />
+
+          "I trust in the value of hard work"— not the kind that's blind, but
+          the kind that's strategic and purposeful. "I strive to approach
+          tasks with a strategic mindset." It's the lens through which I view
+          tasks, trying to ensure that every effort counts.<br /><br />
+
+          I treat time with utmost respect, for it is invaluable, aiming to
+          add value to my moments and to those I meet along the way.<br /><br />
+
+          Thank you for taking the time to visit my website and reading this.
+          I tried to keep it brief. <br />
+          While brevity is a virtue, conveying the essence of who I am is
+          paramount.<br /><br />
+
+          Please feel free to explore my projects and works below.<br /><br />
+
+          I hope to work together with you.
+        </p>
+      </article>
+    </section>
+
+    <section class="scroll" id="projects">
+      <header id="project-header">
+        <h2>These are some of my projects</h2>
+        <p>
+          (You can view the source code on
+          <a href="#contact-me" id="git">Github</a>)
+        </p>
+      </header>
+
+      <div id="my-work">
+
+        <a class='project-box' href='https://quote-generator-tabsir.vercel.app/'>
+          <figure>
+            <img src='/Projects/images/quote_generator.png' />
+            <figcaption>
+              <span class="hidden">
+                <</span> Quote Generator
+                  <span class="hidden"> /> </span>
+            </figcaption>
+          </figure>
+        </a>
+        
+        <a class="project-box" href="/Projects/tribute_page">
+          <figure>
+            <img src="/Projects/images/tribute_page.png" alt="Tribute page project image" />
+            <figcaption class="project-tile">
+              <span class="hidden">
+                <</span> Tribute Page
+                  <span class="hidden"> /> </span>
+            </figcaption>
+          </figure>
+        </a>
+
+        <a class="project-box" href="/Projects/product_landing">
+          <figure>
+            <img src="/Projects/images/product_landing.png" alt="Product landing page image" />
+            <figcaption>
+              <span class="hidden">
+                <</span>Product Landing page<span class="hidden">
+                    /></span>
+            </figcaption>
+          </figure>
+        </a>
+
+        <a class="project-box" href="/Projects/survey_form">
+          <figure>
+            <img src="/Projects/images/surveyform.png" alt="Survey form project image" />
+            <figcaption>
+              <span class="hidden">
+                <</span>Survey Form<span class="hidden">
+                    /></span>
+            </figcaption>
+          </figure>
+        </a>
+
+      </div>
+
+      <button type="button" id="show-all">Show More</button>
+      <div id="btn-con">
+        View Current Page's source code:
+        <button type="button" id="source">
+          <i class="fas fa-file-code icon"></i> VIEW Code
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+
+    <div class="modal-content">
+
+      <div class="section">
+        <h2 class="section-title"><a href="#css">HTML</a></h2>
+        
+        //Click HTML to go to CSS
+        <pre><code id="html" class="html">
+          
+          </code></pre>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title"><a href='#js'>CSS</a></h2>
+
+        //Click CSS to go to JavaScript
+        <pre><code id="css" class="css">
+          
+          </code></pre>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title"><a href='#html'>JavaScript</a></h2>
+
+        //Click JavaScript to go to HTML
+        <pre><code id="js" class="javascript">
+          
+          </code></pre>
+      </div>
+
+      <span id="close">&times;</span>
+    </div>
+  </div>
+
+  <!---------------->
+
+  <footer id="contact-me" class="scroll">
+    <h1 id="footer-heading">Let's work together...</h1>
+    <p>
+      "Great things in business are never done by one person. They're done by
+      a team of people." - Steve Jobs
+    </p>
+
+    <ul id="social-media">
+      <li>
+        <a href=""><i class="fab fa-facebook"></i>Facebook</a>
+      </li>
+
+      <li>
+        <a href="https://github.com/Tabsir99" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+      </li>
+
+      <li id="profile-link">
+        <a href="https://www.linkedin.com/in/tabsir-ahammed-9b1a092a1/" target="_blank">
+          <i class="fab fa-linkedin"></i>LinkedIn</a>
+      </li>
+
+      <li>
+        <a href="https://www.fiverr.com/tabsir99" target="_blank"><img src="/Projects/images/fivr.png" width="37" />Fiverr</a>
+      </li>
+
+      <li>
+        <a href="https://www.upwork.com/freelancers/~011a2afbbf1c24dbc5" target="_blank"><i
+            class="fab fa-upwork"></i>Upwork</a>
+      </li>
+    </ul>
+
+    <div id="email">
+      Email me:
+      <a href="mailto:tabsirconnects@gmail.com" id="email-address">tabsirconnects@gmail.com</a>
+      (Click to send) or
+      <button id="copy"><i class="fas fa-copy fa-lg"></i></button>
+    </div>
+
+    <div id="tribute">
+      Special thanks to <b><a href="freecodecamp.org">freeCodeCamp</a></b>, where my journey began.
+
+      <p>
+        <b>
+          <font size="5">&copy;</font>
+        </b> 2024 Tabsir. All rights reserved. | Created: May 2024 
+        
+      </p>
+    </div>
+  </footer>
+
+  <script src="/PortFolio_website/script.js"></script>
+</body>
+
+</html>
