@@ -39,9 +39,7 @@
 
   --navbar-link-width: 8rem;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -56,9 +54,10 @@ body {
   color: var(--body-color);
   background-color: var(--body-background);
   padding: 1rem;
+}
+#root{
   overflow-x: hidden;
 }
-
 #welcome-section {
   text-align: center;
   margin-top: var(--navheight);
@@ -86,7 +85,6 @@ h2 {
   border-radius: 0.4rem;
   box-shadow: var(--aboutme-shadow);
   margin: 1rem auto 2rem;
-  transform: translateX(100%)
 }
 
 article {
@@ -177,7 +175,7 @@ a {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(calc(var(--grid-max-width) / 4), 1fr)
+    minmax(calc(var(--grid-max-width) / 3), 0.7fr)
   );
   gap: var(--grid-gap);
   width: 100%;
@@ -185,6 +183,7 @@ a {
   margin-bottom: 3rem;
   max-width: var(--grid-max-width);
   padding: 0.5rem;
+  justify-content: center;
 }
 
 #my-work img {
@@ -198,12 +197,20 @@ a {
   justify-content: space-between;
   border: 3px solid rgb(102, 99, 95);
   height: 100%;
+  transition: transform 0.5s ,opacity 0.8s;
 }
 .project-box{
   transition: 0.3s;
 }
 
-
+.go-right{
+  transform: translate(-30%);
+  opacity: 0;
+}
+.go-left{
+  transform: translate(30%);
+  opacity: 0;
+}
 
 #my-work figcaption {
   display: flex;
@@ -321,11 +328,6 @@ a {
   margin: 0 5px;
   font-size: 1.4rem;
   color: lightseagreen;
-}
-
-
-.project-box {
-  cursor: pointer;
 }
 
 #project-header {
@@ -566,6 +568,7 @@ ul#social-media a {
   :root {
     --fheading-size: 1.8rem;
     --footerborder: none;
+    --navbar-link-width: 5rem;
   }
   ul#social-media {
     flex-direction: column;
