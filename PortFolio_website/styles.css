@@ -161,8 +161,11 @@ a {
   justify-self: center;
   margin-right: 1rem;
   cursor: pointer;
+  transition: 0.3s;
 }
-
+#dark-mode:hover {
+  transform: scale(0.9)
+}
 /*Navbar section*/
 
 /*Project section*/
@@ -193,6 +196,14 @@ a {
   border: 3px solid rgb(102, 99, 95);
   height: 100%;
 }
+.project-box{
+  transition: 0.3s;
+}
+.project-box:hover{
+  transform: scale(1.05);
+}
+
+
 
 #my-work figcaption {
   display: flex;
