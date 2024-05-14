@@ -100,8 +100,8 @@ sourcebtn.addEventListener("click", async () => {
 
 
 
-let loadedProjects = 3;
-const increment = 3;
+let loadedProjects = 2;
+const increment = 2;
 
 window.onload = function () {
   loadProjects(loadedProjects);
