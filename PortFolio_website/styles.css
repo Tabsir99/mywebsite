@@ -563,6 +563,9 @@ ul#social-media a {
   #container {
     padding: 0;
   }
+  #about-me article{
+    font-size: 14px
+  }
 }
 @media screen and (max-width: 24rem) {
   :root {
